@@ -20,7 +20,7 @@ public class AppConfig {
     @Bean
     public SalesReport salesReport() {
         return new SalesDetailReport();
-        //return new SalesDetailReport();
+        //return new SalesSummaryReport();
     }
     @Bean
     public ShippingPolicy shippingPolicy() {
