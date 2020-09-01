@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Need title!</title>
+</head>
+<body>
+    <div th:insert="fragments/_header :: header"></div>
+    <h2>
+        Ouput 0
+    </h2>
+    <p>
+        Output 1
+    </p>
+    <!--<img th:src="@{/img/cmnh.png}" alt="Some info"></body>!-->
+    <h2>
+        Output 2
+    </h2>
+    <p>
+        Output 3
+    </p>
+    <p>
+        Output 4
+    </p>
+    <p>
+        Content taken from <!--<a href="link here">here.</a>/!-->
+    </p>
+    <div th:replace="fragments/_footer :: footer"></div>
+
+</body>
+</html>
