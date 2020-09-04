@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Step 1</title>
-</head>
+
+<head th:replace="fragments/_head"></head>
 <body>
     <div th:insert="fragments/_header :: header"></div>
 
-    <div th:insert="fragments/_footer :: footer"></div>
+    <h2>
+        <p style="text-align: center">Step 1</p>
+    </h2>
+    <p style="float: left;">
+        <img th:src="@{/img/step1.jpg}" alt="Picanha">
+        <img th:src="@{/img/step1_2.jpg}" alt="Picanha">
+    </p>
+    <br>
+    <br>Cut and Skewer the Steaks: </br>
+    <br>Cut the roast across the grain into three steaks, each one roughly three inches across.</br>
+    <br>(The grain runs from the “tip” to the wide end of the roast.)</br>
+    <br>Skewer the steaks with the spit, bending them into a “C” shape with the fat cap on top (the outside of the “C” – again).</br>
+    <br>Watch your fingers! </br>
+    <br>Salt the steaks heavily, then let them rest at room temperature while you preheat the grill.</br>
+
+    <br></br>
+
+    <div id="bottomFoot">
+        <div th:replace="fragments/_footer :: footer"></div>
+    </div>
 </body>
 </html>

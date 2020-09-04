@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Step 2</title>
-</head>
+<head th:replace="fragments/_head"></head>
 <body>
     <div th:insert="fragments/_header :: header"></div>
+    <h2>
+        <p style="text-align: center">Step 2</p>
+    </h2>
+    <p style="float: left;">
+        <img th:src="@{/img/rotisserieGrillSet.jpeg}" alt="Picanha">
+    </p>
+    <br>
+    <br>Prepare the Grill: </br>
+    <br>Set the grill up for rotisserie cooking at high heat. </br>
+    <br>The higher the heat, the better the sear you will get.  </br>
+    <br></br>
+    <br></br>
+    <br></br>
 
-    <div th:insert="fragments/_footer :: footer"></div>
+    <br></br>
+
+    <div id="bottomFoot">
+        <div th:replace="fragments/_footer :: footer"></div>
+    </div>
 </body>
 </html>

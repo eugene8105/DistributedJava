@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/_head"></head>
+<body>
+<div th:insert="fragments/_header :: header"></div>
+<h2>
+    <p style="text-align: center">Ready</p>
+</h2>
+<p style="float: left;">
+    <img th:src="@{/img/ready.jpg}" alt="Picanha">
+</p>
+<br>
+<br>When the exterior of the meat is cooked and has a nice shiny charred appearance </br>
+<br>it's time to start slicing off thin slivers of meat for your guests.</br>
+<br>This is good served with this Chimichurri sauce recipe on the side.</br>
+<br>Notice how you'll be slicing with the grain and the meat remains tender and juicy.</br>
+<br>If there is meat remaining on the skewer place it back over the BBQ to char up the newly exposed exterior.</br>
+<div id="bottomFoot">
+    <div th:replace="fragments/_footer :: footer"></div>
+</div>
+</body>
+</html>

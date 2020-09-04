@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Need title!</title>
-</head>
+<head th:replace="fragments/_head"></head>
 <body>
     <div th:insert="fragments/_header :: header"></div>
     <h2>
-        Ouput 0
+        <p style="text-align: center">PICANHA – ROTISSERIE ON THE CHARCOAL GRILL</p>
     </h2>
-    <p>
-        Output 1
+    <p style="float: left;">
+        <img th:src="@{/img/main.png}" alt="Picanha">
     </p>
-    <!--<img th:src="@{/img/cmnh.png}" alt="Some info"></body>!-->
-    <h2>
-        Output 2
-    </h2>
-    <p>
-        Output 3
-    </p>
-    <p>
-        Output 4
-    </p>
-    <p>
-        Content taken from <!--<a href="link here">here.</a>/!-->
-    </p>
-    <div th:replace="fragments/_footer :: footer"></div>
+    <br>
+        <br>Picanha is a Top Sirloin Cap Roast, with the fat still on (the fat is key).</br>
+        <br>It is cut across the grain into three steaks, bent into a “C” shape, and cooked on the rotisserie.</br>
+        <br>This is tutorial with a three easy steps how to make Picanha rotisserie on the charcoal grill.</br>
 
+    <div id="bottomFoot">
+        <div th:replace="fragments/_footer :: footer"></div>
+    </div>
 </body>
 </html>

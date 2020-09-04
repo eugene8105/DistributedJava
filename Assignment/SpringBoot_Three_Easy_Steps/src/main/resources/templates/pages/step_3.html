@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Step 3</title>
-</head>
+<head th:replace="fragments/_head"></head>
 <body>
     <div th:insert="fragments/_header :: header"></div>
+    <h2>
+        <p style="text-align: center">Step 3</p>
+    </h2>
+    <p style="float: left;">
+        <img th:src="@{/img/onGrill.jpeg}" alt="Picanha">
+    </p>
+    <br>
+    <br>Cook the Steaks:</br>
+    <br>Put the spit on the rotisserie, and start the motor turning. </br>
+    <br>Cook the steaks with the lid closed until the internal temperature reaches 115*F for Rare,</br>
+    <br>or 120*F to 125*F for medium-rare, 20 to 30 minutes.</br>
+    <br>Start checking the temperature in the thickest steak every five minutes after 15 to 20 minutes of cooking.</br>
+    <br>Watch out for the spit when you’re checking the temperature – it can throw the reading off.</br>
+    <br></br>
 
-    <div th:insert="fragments/_footer :: footer"></div>
+    <div id="bottomFoot">
+        <div th:replace="fragments/_footer :: footer"></div>
+    </div>
 </body>
 </html>
