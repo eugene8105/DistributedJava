@@ -6,10 +6,22 @@
 <div th:insert="fragments/_header :: header"></div>
 
 <div id="content">
-    <h2>Golf Croquet Terms</h2>
+    <h2 th:text="${pageTitle}">TITLE</h2>
 
     <!-- Create a table of GlossaryTerm objects here -->
-
+    <table>
+        <tr th:each="item : ${terms}">
+            <td>
+                <span th:text="${item.term}">TERM</span>
+            </td>
+            <td>
+                <span th:text="${item.definition}">DEFINITION</span>
+            </td>
+            <td>
+                <span th:text="${item.regulation}">REGULATION</span>
+            </td>
+        </tr>
+    </table>
 
 </div>
 

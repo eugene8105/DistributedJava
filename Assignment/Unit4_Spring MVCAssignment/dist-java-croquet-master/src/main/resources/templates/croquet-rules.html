@@ -5,10 +5,12 @@
 <div th:insert="fragments/_header :: header"></div>
 
 <div id="content">
-    <h2>Rules of Golf Croquet</h2>
+    <h2 th:text="${pageTitle}">TITLE</h2>
 
     <!-- Create an unordered list of String objects here -->
-
+    <ul th:each="item : ${rules}">
+        <li th:text="${item}">RULES</li>
+    </ul>
 
 </div>
 
