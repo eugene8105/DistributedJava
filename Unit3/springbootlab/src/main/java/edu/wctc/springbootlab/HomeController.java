@@ -1,6 +1,8 @@
 package edu.wctc.springbootlab;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -10,7 +12,7 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping("/cart")
+    @GetMapping("/cart")
     public String getCart() {
 
         return "orders/cart";
@@ -22,7 +24,7 @@ public class HomeController {
         return "catalog/product-detail";
     }
 
-    @RequestMapping("/place-order")
+    @PostMapping("/place-order")
     public String doRedirect() {
         return "redirect:/";
     }
