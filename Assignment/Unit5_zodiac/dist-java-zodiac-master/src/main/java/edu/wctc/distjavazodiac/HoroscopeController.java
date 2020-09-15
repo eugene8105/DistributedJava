@@ -35,10 +35,10 @@ public class HoroscopeController {
         model.addAttribute("monthList", monthListService.getMonths());
 
         Birthday formDefaults = new Birthday();
-        formDefaults.setYear(1975);
-        formDefaults.setMonth(9);
-        formDefaults.setDay(29);
-        formDefaults.setZodiacType("Eastern");
+        //formDefaults.setYear(1975);
+        //formDefaults.setMonth(9);
+        //formDefaults.setDay(29);
+        //formDefaults.setZodiacType("Eastern");
         model.addAttribute("birthday", formDefaults);
         return "birthday-form";
     }
