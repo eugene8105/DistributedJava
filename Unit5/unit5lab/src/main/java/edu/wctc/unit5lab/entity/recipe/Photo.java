@@ -17,7 +17,7 @@ public class Photo {
 
     @ManyToOne
     @Column(name = "photo_recipe_id")
-    private Recipe recipeId;
+    private int recipeId;
 
     @Column(name = "photo_filename")
     private String fileName;

@@ -16,7 +16,7 @@ public class Recipe {
 
     @ManyToOne
     @JoinColumn(name = "recipe_chef_id")
-    private Chef chefId;
+    private int chefId;
 
     @Column(name = "recipe_title")
     private String Title;

@@ -17,7 +17,7 @@ public class Photo {
     private int id;
 
     @ManyToOne
-    private Collector collectorId;
+    private int collectorId;
 
     @Column(name = "phote_filename")
     private String fileName;
