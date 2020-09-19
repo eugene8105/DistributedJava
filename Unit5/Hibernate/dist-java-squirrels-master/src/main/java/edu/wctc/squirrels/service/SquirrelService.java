@@ -6,6 +6,5 @@ import java.util.List;
 
 public interface SquirrelService {
     Squirrel getSquirrel(int squirrelId);
-
     List<Squirrel> getSquirrelList();
 }

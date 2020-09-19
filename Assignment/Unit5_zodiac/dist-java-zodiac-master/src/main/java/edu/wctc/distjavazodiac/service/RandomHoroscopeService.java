@@ -4,12 +4,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.wctc.distjavazodiac.entity.Birthday;
 import edu.wctc.distjavazodiac.entity.Fortune;
 import edu.wctc.distjavazodiac.entity.Horoscope;
+import edu.wctc.distjavazodiac.repo.FortuneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,6 +27,9 @@ public class RandomHoroscopeService implements HoroscopeService {
     public RandomHoroscopeService(ZodiacService zodiacService) {
         this.zodiacService = zodiacService;
     }
+
+    @Autowired
+    public FortuneRepository fortuneRepository;
 
     @Override
     public Horoscope getHoroscope(Birthday birthday) {
@@ -45,15 +50,6 @@ public class RandomHoroscopeService implements HoroscopeService {
 
     @PostConstruct
     public void initHoroscopes() {
-        ObjectMapper mapper = new ObjectMapper();
-
-        Fortune[] fortuneArray;
-        try {
-            fortuneArray = mapper.readValue(Paths.get("fortunes.json").toFile(), Fortune[].class);
-        } catch (IOException e) {
-            e.printStackTrace();
-            fortuneArray = new Fortune[]{new Fortune()};
-        }
-        allFortunes = Arrays.asList(fortuneArray);
+        fortuneRepository.findAll().forEach(allFortunes::add);
     }
 }

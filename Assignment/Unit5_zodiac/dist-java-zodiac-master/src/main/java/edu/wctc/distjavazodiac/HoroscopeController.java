@@ -1,6 +1,7 @@
 package edu.wctc.distjavazodiac;
 
 import edu.wctc.distjavazodiac.entity.Birthday;
+import edu.wctc.distjavazodiac.entity.Fortune;
 import edu.wctc.distjavazodiac.service.HoroscopeService;
 import edu.wctc.distjavazodiac.service.MonthListService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class HoroscopeController {
     private MonthListService monthListService;
     @Autowired
     private HoroscopeService horoscopeService;
+
 
     @PostMapping("/get-horoscope")
     public String processForm(@ModelAttribute Birthday bday,

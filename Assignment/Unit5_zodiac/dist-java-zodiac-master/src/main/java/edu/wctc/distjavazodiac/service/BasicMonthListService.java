@@ -21,20 +21,14 @@ public class BasicMonthListService implements MonthListService {
 
     @Override
     public List<Month> getMonths() {
-        List<Month> list = new ArrayList<>();
-        monthRepository.findAllByMonthId().forEach(list::add);
-        return list;
+        monthRepository.findAllByMonthId().forEach(monthList::add);
+        return monthList;
     }
-
-//    @Override
-//    public List<Month> getMonths() {
-//        return monthList;
-//    }
 
 //    @PostConstruct
 //    public void initMonths() {
-
-
+//
+//
 //        ObjectMapper mapper = new ObjectMapper();
 //        try {
 //            Month[] monthArray = mapper.readValue(Paths.get("months.json").toFile(), Month[].class);
