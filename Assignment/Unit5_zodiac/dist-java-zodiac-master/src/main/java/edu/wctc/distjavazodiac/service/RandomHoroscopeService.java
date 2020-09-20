@@ -32,6 +32,12 @@ public class RandomHoroscopeService implements HoroscopeService {
     public FortuneRepository fortuneRepository;
 
     @Override
+    public List<Fortune> getFortune() {
+        fortuneRepository.findAll().forEach(allFortunes::add);
+        return allFortunes;
+    }
+
+    @Override
     public Horoscope getHoroscope(Birthday birthday) {
         String sign;
         if (birthday.getZodiacType().toLowerCase().startsWith("w")) {
@@ -48,8 +54,4 @@ public class RandomHoroscopeService implements HoroscopeService {
         return hscope;
     }
 
-    @PostConstruct
-    public void initHoroscopes() {
-        fortuneRepository.findAll().forEach(allFortunes::add);
-    }
 }

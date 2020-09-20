@@ -21,21 +21,8 @@ public class BasicMonthListService implements MonthListService {
 
     @Override
     public List<Month> getMonths() {
-        monthRepository.findAllByMonthId().forEach(monthList::add);
+        monthRepository.findAll().forEach(monthList::add);
         return monthList;
     }
 
-//    @PostConstruct
-//    public void initMonths() {
-//
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        try {
-//            Month[] monthArray = mapper.readValue(Paths.get("months.json").toFile(), Month[].class);
-//            monthList = Arrays.asList(monthArray);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            monthList = new ArrayList<>(0);
-//        }
-//    }
 }
