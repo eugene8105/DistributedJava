@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name  = "Month")
+@Table(name = "Month")
 public class Month {
     @Id
     @Column(name = "num")

@@ -15,12 +15,12 @@ import java.util.List;
 
 @Service
 public class BasicMonthListService implements MonthListService {
-    private List<Month> monthList;
     @Autowired
     private MonthRepository monthRepository;
 
     @Override
     public List<Month> getMonths() {
+        List<Month> monthList = new ArrayList<>();
         monthRepository.findAll().forEach(monthList::add);
         return monthList;
     }

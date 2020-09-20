@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface MonthRepository extends CrudRepository<Month,Integer> {
+public interface MonthRepository extends CrudRepository<Month, Integer> {
 }

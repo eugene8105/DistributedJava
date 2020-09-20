@@ -48,7 +48,7 @@ public class RandomHoroscopeService implements HoroscopeService {
 
         Horoscope hscope = new Horoscope();
         hscope.setSign(sign);
-
+        getFortune();
         int randomIndex = (int) (Math.random() * allFortunes.size());
         hscope.setHoroscope(allFortunes.get(randomIndex).getText());
         return hscope;
