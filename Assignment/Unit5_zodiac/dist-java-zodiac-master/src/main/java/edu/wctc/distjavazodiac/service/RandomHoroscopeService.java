@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.wctc.distjavazodiac.entity.Birthday;
 import edu.wctc.distjavazodiac.entity.Fortune;
 import edu.wctc.distjavazodiac.entity.Horoscope;
+import edu.wctc.distjavazodiac.entity.Month;
 import edu.wctc.distjavazodiac.repo.FortuneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,7 @@ public class RandomHoroscopeService implements HoroscopeService {
 
     @Override
     public List<Fortune> getFortune() {
+        allFortunes = new ArrayList<>();
         fortuneRepository.findAll().forEach(allFortunes::add);
         return allFortunes;
     }
