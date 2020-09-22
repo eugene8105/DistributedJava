@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head">HEAD</head>
+<body>
+<header th:replace="frags :: header">HEADER</header>
+<div id="grid">
+    <div></div>
+    <div id="container">
+        <h1 th:text="${training.name}">TRAINING NAME</h1>
+
+        <form th:action="@{/submit-training}" method="post">
+            <input type="hidden" name="trainingId" th:value="${training.id}">
+
+            <div th:each="question : ${training.questionList}" class="question">
+
+                <h3 th:text="${question.text}">QUESTION</h3>
+                <div th:each="answer : ${question.answerList}">
+                    <input type="radio" th:id="${answer.id}" th:value="${answer.id}" th:name="${question.id}">
+                    <label th:text="${answer.text}" th:for="${answer.id}">ANSWER</label>
+                </div>
+
+            </div>
+
+            <input type="submit" id="submit-quiz" value="I Be Finished">
+        </form>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

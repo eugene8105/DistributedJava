@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>YAAR: You Are a Resource</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Squada+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}">
+</head>
+<body>
+<header th:fragment="header">
+    <nav class="parent">
+        <div class="div1">
+            <a th:href="@{/}">
+                <img th:src="@{/img/yaar-logo.jpg}" alt="You Are a Resource Logo">
+            </a>
+        </div>
+        <div class="div2">
+
+        </div>
+        <div class="div3">
+            <h1>YAAR: Human Resources Training for Today's Pirate Workforce</h1>
+        </div>
+        <div class="div4">
+            <!-- allow any authenticated users (regardless of authority) to see the div and its content -->
+            <div sec:authorize="isAuthenticated()">
+                <h1 th:text="|Hello ${#authentication.name}!|"></h1>
+                <form th:action="@{/logout}" method="post">
+                    <input id="logout" type="submit" value="Logout">
+                </form>
+            </div>
+
+            <!-- allow any unauthenticated users to see the div and its content -->
+            <div sec:authorize="isAnonymous()">
+                <h1><a th:href="@{/login}">Login</a></h1>
+            </div>
+        </div>
+        <div class="div5">
+            <!-- allow anyone with the authority of 'crew' to see the div and its content-->
+            <div sec:authorize="hasAuthority('crew')">
+                <h1><a th:href="@{/my-training}">View My Training</a></h1>
+            </div>
+        </div>
+        <div class="div6">
+            <!-- allow anyone who has access to this url to see the div and its content -->
+            <div sec:authorize-url="/training-report">
+                <h1><a th:href="@{/training-report}">Training Report</a></h1>
+            </div>
+        </div>
+        <div class="div7"></div>
+    </nav>
+    <nav>
+
+
+    </nav>
+</header>
+</body>
+</html>

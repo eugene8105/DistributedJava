@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head">HEAD</head>
+<body>
+<header th:replace="frags :: header">HEADER</header>
+<div id="grid">
+    <div></div>
+    <div id="container">
+        <h1>HR Dashboard</h1>
+        <table class="hr-report">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Training Status</th>
+            </tr>
+            <tr th:each="pirate : ${crewList}" class="hr-report-row">
+                <td th:text="${pirate.name}">NAME</td>
+                <td th:text="${pirate.position.name}">POSITION</td>
+                <td>
+                    <table class="hr-report-status">
+                        <tr th:each="training : ${pirate.trainingStatusList}">
+                            <td th:text="${training.name}">TRAINING</td>
+                            <td th:text="${training.completed} ? 'Complete' : 'Incomplete'">STATUS</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

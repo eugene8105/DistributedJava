@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="frags :: head">HEAD</head>
+<body>
+<header th:replace="frags :: header">HEADER</header>
+<div id="grid">
+    <div></div>
+    <div id="container">
+        <h1>My Training Record</h1>
+        <h2 th:text="|Current Position: ${me.position.name}|">POSITION</h2>
+        <h3 th:text="|Duties: ${me.position.description}|">DUTIES</h3>
+        <table>
+            <tr th:each="training : ${me.trainingStatusList}">
+                <td th:text="${training.name}">TRAINING TITLE</td>
+                <td th:if="${training.completed}">
+                    <a th:href="@{/take-training(id=${training.id})}">Scuttled</a>
+                </td>
+                <td th:unless="${training.completed}">
+                    <a th:href="@{/take-training(id=${training.id})}">Avast Ye!</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>
