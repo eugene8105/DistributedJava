@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
-<head th:replace="fragments/frags :: head"></head>
+<head th:replace="frags :: head"></head>
 
 <body>
-    <div th:insert="fragments/frags :: header"></div>
+    <div th:insert="frags :: header"></div>
         Anyone can see this page.
     <br/>
 
-    <a th:href="@{/secret-recipe}">Secret Recipe</a>
-
-    <div th:replace="fragments/frags :: disclaimer"></div>
+    <div th:replace="frags :: disclaimer"></div>
 </body>
 </html>
