@@ -33,19 +33,20 @@ public class WFCSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws  Exception {
                  httpSecurity.authorizeRequests()
-                .antMatchers("/","/img/**", "/style/**",  "/h2-console/**").permitAll()
+                .antMatchers("/","/img/**", "/style/**").permitAll()
                 .antMatchers("/secret-recipe").hasAuthority("major")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll()
                 .and()
                 .logout().permitAll();
-                 httpSecurity.csrf();
-                //.ignoringAntMatchers("/h2-console/**");
+                 httpSecurity.csrf()
+                .ignoringAntMatchers("/h2-console/**");
 
     }
 
     public void configure(WebSecurity webSecurity) throws Exception {
-        webSecurity.ignoring().antMatchers("/img/**", "/style/**");
+        webSecurity.ignoring().antMatchers("/resources/**");
+        // /img/**", "/style/**
     }
 }
