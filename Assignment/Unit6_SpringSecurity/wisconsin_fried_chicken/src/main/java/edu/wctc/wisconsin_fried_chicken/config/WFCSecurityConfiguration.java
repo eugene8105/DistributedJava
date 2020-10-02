@@ -46,7 +46,7 @@ public class WFCSecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     public void configure(WebSecurity webSecurity) throws Exception {
-        webSecurity.ignoring().antMatchers("/resources/**");
+        //webSecurity.ignoring().antMatchers("/resources/**");
         // /img/**", "/style/**
     }
 }

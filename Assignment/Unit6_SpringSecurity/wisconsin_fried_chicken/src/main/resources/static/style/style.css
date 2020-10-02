@@ -4,8 +4,17 @@ body {
     padding: 25px;
     width: 100%;
 }
+
+#authenticated {
+    padding-left:50px;
+}
+
+#authenticated2 {
+    padding-left:50px;
+}
+
 input[type=password], input[type=text] {
-    width: 100%;
+    width: 50%;
     padding: 16px 20px;
     margin-top: 5px;
     margin-bottom: 25px;
@@ -18,22 +27,22 @@ input[type=password], input[type=text] {
 input#logout {
     text-align: center;
     vertical-align: middle;
-    font-size: 30px;
-    color: lightgrey;
+    font-size: 16px;
+    color: cornflowerblue;
     background: none;
     border: none;
 }
 
-input#login, input#submit-quiz {
-    width: 100%;
+input#login {
+    width: 50%;
     background-color: #333;
     color: #f1f1f1;
     border: none;
-    padding: 15px 32px;
+    padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 25px;
 }
 

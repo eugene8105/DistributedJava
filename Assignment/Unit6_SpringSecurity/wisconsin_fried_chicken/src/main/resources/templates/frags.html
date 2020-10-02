@@ -27,17 +27,17 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-<!--                &lt;!&ndash;<li class="nav-item">-->
-                    <div sec:authorize="hasAuthority('employee')">
+                <li class="nav-item">
+                    <div id="authenticated" sec:authorize="hasAuthority('employee')">
                         <h2><a th:href="@{/employee-benefits}">Employee benefits</a></h2>
                     </div>
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-                    <div sec:authorize="hasAuthority('major')">
+                </li>
+                <li class="nav-item">
+                    <div id="authenticated2" sec:authorize="hasAuthority('major')">
                         <h2><a th:href="@{/employee-benefits}">Employee benefits</a></h2>
                         <h2><a th:href="@{/secret-recipe}">Secret recipe</a></h2>
                     </div>
-<!--                </li>-->
+                </li>
             </ul>
         </div>
         <div>
@@ -47,7 +47,7 @@
 </header>
 
 <footer th:fragment="disclaimer">
-    For entertainment purposes only.
+    Disclaimer.
 </footer>
 
 </body>

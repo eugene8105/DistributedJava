@@ -10,9 +10,11 @@
     <div id="container">
         <form th:action="@{/login}" method="post">
             <label for="username">Username</label>
+            <br/>
             <input type="text" id="username" name="username" autofocus="autofocus"/>
             <br/>
             <label for="password">Password</label>
+            <br/>
             <input type="password" id="password" name="password"/>
             <br/>
             <input id="login" type="submit" value="Log in"/>
@@ -26,5 +28,6 @@
     </div>
     <div></div>
 </div>
+<div th:replace="frags :: disclaimer"></div>
 </body>
 </html>
