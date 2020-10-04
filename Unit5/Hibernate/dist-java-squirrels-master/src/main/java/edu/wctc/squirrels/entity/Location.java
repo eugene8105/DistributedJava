@@ -16,8 +16,10 @@ public class Location {
     @Id
     @Column(name="location_id")
     private int id;
+
     @Column(name="name")
     private String name;
+
     @Column(name="country")
     private String country;
 }
