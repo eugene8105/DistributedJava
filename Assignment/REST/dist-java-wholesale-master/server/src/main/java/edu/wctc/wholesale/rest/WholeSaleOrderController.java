@@ -1,12 +1,12 @@
-package rest;
+package edu.wctc.wholesale.rest;
 
-import entity.WholeSaleOrder;
+import edu.wctc.wholesale.entity.WholeSaleOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.WholeSaleOrderService;
+import edu.wctc.wholesale.service.WholeSaleOrderService;
 
 import java.util.ArrayList;
 import java.util.List;

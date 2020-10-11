@@ -1,6 +1,6 @@
-package repo;
+package edu.wctc.wholesale.repo;
 
-import entity.WholeSaleOrder;
+import edu.wctc.wholesale.entity.WholeSaleOrder;
 import org.springframework.data.repository.CrudRepository;
 
 public interface WholeSaleOrderRepository extends CrudRepository<WholeSaleOrder, Integer> {

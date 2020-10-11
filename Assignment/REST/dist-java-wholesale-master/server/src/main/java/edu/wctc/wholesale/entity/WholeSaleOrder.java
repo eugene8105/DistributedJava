@@ -1,11 +1,9 @@
-package entity;
+package edu.wctc.wholesale.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @Data

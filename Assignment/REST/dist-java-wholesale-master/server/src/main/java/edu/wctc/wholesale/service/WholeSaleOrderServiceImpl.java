@@ -1,16 +1,16 @@
-package service;
+package edu.wctc.wholesale.service;
 
-import entity.WholeSaleOrder;
+import edu.wctc.wholesale.entity.WholeSaleOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
-import repo.WholeSaleOrderRepository;
+import edu.wctc.wholesale.repo.WholeSaleOrderRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@ComponentScan({"edu.wctc.wholesale"})
+//@ComponentScan({"edu.wctc.wholesale"})
 public class WholeSaleOrderServiceImpl implements WholeSaleOrderService {
 
     @Autowired

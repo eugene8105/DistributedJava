@@ -1,4 +1,4 @@
-package entity;
+package edu.wctc.wholesale.entity;
 
 import lombok.Data;
 

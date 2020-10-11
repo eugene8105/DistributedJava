@@ -1,9 +1,9 @@
-package service;
+package edu.wctc.wholesale.service;
 
-import entity.Customer;
+import edu.wctc.wholesale.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repo.CustomerRepository;
+import edu.wctc.wholesale.repo.CustomerRepository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package service;
+package edu.wctc.wholesale.service;
 
-import entity.Customer;
+import edu.wctc.wholesale.entity.Customer;
 
 import java.util.List;
 
