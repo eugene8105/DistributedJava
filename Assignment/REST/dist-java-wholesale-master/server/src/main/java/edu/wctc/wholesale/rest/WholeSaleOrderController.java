@@ -20,7 +20,7 @@ public class WholeSaleOrderController {
 
     @GetMapping("/api/orders")
                             //              :45679
-    @CrossOrigin(origins = "http://localhost:.....")
+    @CrossOrigin(origins = "http://localhost:63342")
     public List<WholeSaleOrder> getOrders() {
         List<WholeSaleOrder> list = new ArrayList<>();
         wholeSaleOrderService.getAllOrders().forEach(list::add);

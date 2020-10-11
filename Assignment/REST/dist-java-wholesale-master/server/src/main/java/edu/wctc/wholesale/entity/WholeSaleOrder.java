@@ -1,12 +1,17 @@
 package edu.wctc.wholesale.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "wholesale_order")
 public class WholeSaleOrder {
     @Id
@@ -20,12 +25,13 @@ public class WholeSaleOrder {
     @Column(name = "terms")
     private String terms;
 
-    @Column(name = "customer_id")
+//    @Column(name = "customer_id")
     @ManyToOne
     @JoinColumn(name = "customer_id") // foreign key
     private Customer customerId;
+//    private int customerId;
 
-    @Column(name = "product_id")
+//    @Column(name = "product_id")
     @ManyToOne
     @JoinColumn(name = "product_id") // foreign key
     private Product productId;

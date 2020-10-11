@@ -14,7 +14,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String showAllOrders(Model model) {
-
+        model.addAttribute("orderList",wholeSaleOrderService.getAllOrders());
         return "index";
     }
 
