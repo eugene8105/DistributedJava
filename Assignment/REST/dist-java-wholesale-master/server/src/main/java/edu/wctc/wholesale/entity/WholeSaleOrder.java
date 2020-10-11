@@ -20,21 +20,19 @@ public class WholeSaleOrder {
     private int id;
 
     @Column(name = "purchase_order_num")
-    private String purchaseOrderNum;
+    private String purchaseOrderNumber;
 
     @Column(name = "terms")
     private String terms;
 
-//    @Column(name = "customer_id")
     @ManyToOne
     @JoinColumn(name = "customer_id") // foreign key
-    private Customer customerId;
+    private Customer customer;
 //    private int customerId;
 
-//    @Column(name = "product_id")
     @ManyToOne
     @JoinColumn(name = "product_id") // foreign key
-    private Product productId;
+    private Product product;
 //    private int productId;
 
     @Column(name = "purchase_date")
