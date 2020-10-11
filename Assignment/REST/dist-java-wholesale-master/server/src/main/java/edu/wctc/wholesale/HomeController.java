@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 import service.WholeSaleOrderService;
 
 @RestController
-public class WholeSaleOrderController {
+public class HomeController {
 
-//    @Autowired
-//    private WholeSaleOrderService wholeSaleOrderService;
+    @Autowired
+    private WholeSaleOrderService wholeSaleOrderService;
 
     @RequestMapping("/")
     public String showAllOrders(Model model) {
