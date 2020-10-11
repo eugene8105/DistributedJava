@@ -9,8 +9,8 @@ import service.WholeSaleOrderService;
 @RestController
 public class WholeSaleOrderController {
 
-    @Autowired
-    private WholeSaleOrderService wholeSaleOrderService;
+//    @Autowired
+//    private WholeSaleOrderService wholeSaleOrderService;
 
     @RequestMapping("/")
     public String showAllOrders(Model model) {
